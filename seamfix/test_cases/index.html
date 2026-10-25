@@ -1,0 +1,317 @@
+<!doctype html><meta charset="utf-8"><title>seamfix test cases</title>
+<style>
+:root{--ink:#1d1d1f;--mute:#6e6e73;--line:#e5e5ea;--ok:#1f8a4c;--bad:#c62828}
+body{font:14px/1.5 -apple-system,BlinkMacSystemFont,Inter,system-ui,sans-serif;color:var(--ink);background:#fafafa;margin:0;padding:32px}
+h1{font-size:22px;margin:0 0 4px} .sub{color:var(--mute);margin:0 0 24px}
+article{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;margin:0 0 16px}
+article.fail{border-color:#f3c0c0} header{display:flex;justify-content:space-between;align-items:center}
+h2{font-size:16px;margin:0} .verdict{font-weight:600;font-size:12px;letter-spacing:.04em}
+.pass .verdict{color:var(--ok)} .fail .verdict{color:var(--bad)} .tests{color:var(--mute);margin:4px 0 12px}
+dl{display:grid;grid-template-columns:90px 1fr;gap:2px 12px;margin:0 0 12px} dt{color:var(--mute)} dd{margin:0}
+.chip{display:inline-block;border-radius:99px;padding:0 8px;font-size:12px;margin-right:4px}
+.chip.ok{background:#e6f4ea;color:var(--ok)} .chip.bad{background:#fdecea;color:var(--bad)}
+.pair{display:grid;grid-template-columns:repeat(3,1fr);gap:12px} figure{margin:0}
+img{width:100%;border-radius:8px;border:1px solid var(--line);image-rendering:auto} figcaption{color:var(--mute);font-size:12px;margin-top:4px}
+.files a{color:var(--mute)} .none{color:var(--mute)}
+</style>
+<h1>seamfix test cases</h1><p class="sub">23 of 23 pass · free mode: LaMa only, no paid call · regenerate with <code>python -m seamfix.cases</code></p>
+
+<article class="pass">
+  <header><h2>seamless</h2><span class="verdict">PASS</span></header>
+  <p class="tests">a tile whose joins already pass</p>
+  <dl><dt>expected</dt><dd>returned</dd>
+      <dt>outcome</dt><dd><b>returned</b> </dd>
+      <dt>size</dt><dd>512x512 → 512x512</dd>
+      <dt>windows</dt><dd>0 accepted of 0</dd>
+      <dt>checks</dt><dd><span class="chip ok">byte_identical</span></dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/seamless/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/seamless/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/seamless/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (returned)</figcaption></figure></div>
+  <p class="files"><a href="seamless/run/report.json">report.json</a> · <a href="seamless/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>left_right_break</h2><span class="verdict">PASS</span></header>
+  <p class="tests">left edge against right edge broken over a stretch</p>
+  <dl><dt>expected</dt><dd>fixed or review</dd>
+      <dt>outcome</dt><dd><b>review</b> no repair passed every check; the original is kept</dd>
+      <dt>size</dt><dd>512x512 → 512x512</dd>
+      <dt>windows</dt><dd>0 accepted of 1</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/left_right_break/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/left_right_break/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/left_right_break/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (review)</figcaption></figure></div>
+  <p class="files"><a href="left_right_break/run/report.json">report.json</a> · <a href="left_right_break/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>top_bottom_break</h2><span class="verdict">PASS</span></header>
+  <p class="tests">top edge against bottom edge broken over a stretch</p>
+  <dl><dt>expected</dt><dd>fixed or review</dd>
+      <dt>outcome</dt><dd><b>review</b> no repair passed every check; the original is kept</dd>
+      <dt>size</dt><dd>512x512 → 512x512</dd>
+      <dt>windows</dt><dd>0 accepted of 1</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/top_bottom_break/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/top_bottom_break/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/top_bottom_break/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (review)</figcaption></figure></div>
+  <p class="files"><a href="top_bottom_break/run/report.json">report.json</a> · <a href="top_bottom_break/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>corner_break</h2><span class="verdict">PASS</span></header>
+  <p class="tests">both joins broken only where they cross: the corner painted once</p>
+  <dl><dt>expected</dt><dd>fixed or review</dd>
+      <dt>outcome</dt><dd><b>review</b> no repair passed every check; the original is kept</dd>
+      <dt>size</dt><dd>512x512 → 512x512</dd>
+      <dt>windows</dt><dd>0 accepted of 1</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/corner_break/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/corner_break/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/corner_break/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (review)</figcaption></figure></div>
+  <p class="files"><a href="corner_break/run/report.json">report.json</a> · <a href="corner_break/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>break_across_wrap</h2><span class="verdict">PASS</span></header>
+  <p class="tests">a broken stretch that runs off the bottom and on at the top</p>
+  <dl><dt>expected</dt><dd>fixed or review</dd>
+      <dt>outcome</dt><dd><b>review</b> no repair passed every check; the original is kept</dd>
+      <dt>size</dt><dd>512x512 → 512x512</dd>
+      <dt>windows</dt><dd>0 accepted of 1</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/break_across_wrap/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/break_across_wrap/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/break_across_wrap/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (review)</figcaption></figure></div>
+  <p class="files"><a href="break_across_wrap/run/report.json">report.json</a> · <a href="break_across_wrap/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>over_cropped</h2><span class="verdict">PASS</span></header>
+  <p class="tests">1.45 x 1.3 repeats in one image: cut to the repeat, no AI</p>
+  <dl><dt>expected</dt><dd>cut</dd>
+      <dt>outcome</dt><dd><b>cut</b> exact repeat: every pixel continues across the lr, tb join; the seam check reads a busy join as a seam there</dd>
+      <dt>size</dt><dd>742x665 → 512x512</dd>
+      <dt>windows</dt><dd>0 accepted of 0</dd>
+      <dt>checks</dt><dd><span class="chip ok">size_is_repeat</span></dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/over_cropped/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/over_cropped/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/over_cropped/run/cut_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (cut)</figcaption></figure></div>
+  <p class="files"><a href="over_cropped/run/report.json">report.json</a> · <a href="over_cropped/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>half_drop</h2><span class="verdict">PASS</span></header>
+  <p class="tests">a half-drop repeat: straight tile two repeats wide, built pixel for pixel</p>
+  <dl><dt>expected</dt><dd>cut</dd>
+      <dt>outcome</dt><dd><b>cut</b> exact repeat: every pixel continues across the lr, tb join; the seam check reads a busy join as a seam there</dd>
+      <dt>size</dt><dd>780x390 → 600x260</dd>
+      <dt>windows</dt><dd>0 accepted of 0</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/half_drop/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/half_drop/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/half_drop/run/cut_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (cut)</figcaption></figure></div>
+  <p class="files"><a href="half_drop/run/report.json">report.json</a> · <a href="half_drop/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>odd_size</h2><span class="verdict">PASS</span></header>
+  <p class="tests">333 x 517, odd on both sides, left-right broken</p>
+  <dl><dt>expected</dt><dd>fixed or review</dd>
+      <dt>outcome</dt><dd><b>review</b> no repair passed every check; the original is kept</dd>
+      <dt>size</dt><dd>333x517 → 333x517</dd>
+      <dt>windows</dt><dd>2 accepted of 8</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/odd_size/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/odd_size/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/odd_size/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (review)</figcaption></figure></div>
+  <p class="files"><a href="odd_size/run/report.json">report.json</a> · <a href="odd_size/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>tiny</h2><span class="verdict">PASS</span></header>
+  <p class="tests">48 x 48 dot lattice, left-right broken. It also repeats every 12 rows: a cut may only shorten it, never hide the broken join</p>
+  <dl><dt>expected</dt><dd>fixed or review</dd>
+      <dt>outcome</dt><dd><b>review</b> no repair passed every check; the original is kept</dd>
+      <dt>size</dt><dd>48x48 → 48x48</dd>
+      <dt>windows</dt><dd>0 accepted of 2</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/tiny/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/tiny/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/tiny/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (review)</figcaption></figure></div>
+  <p class="files"><a href="tiny/run/report.json">report.json</a> · <a href="tiny/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>flat_colour</h2><span class="verdict">PASS</span></header>
+  <p class="tests">one flat colour: the floor keeps the ratio sane</p>
+  <dl><dt>expected</dt><dd>returned</dd>
+      <dt>outcome</dt><dd><b>returned</b> </dd>
+      <dt>size</dt><dd>200x160 → 200x160</dd>
+      <dt>windows</dt><dd>0 accepted of 0</dd>
+      <dt>checks</dt><dd><span class="chip ok">byte_identical</span></dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/flat_colour/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/flat_colour/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/flat_colour/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (returned)</figcaption></figure></div>
+  <p class="files"><a href="flat_colour/run/report.json">report.json</a> · <a href="flat_colour/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>unrelated_edges</h2><span class="verdict">PASS</span></header>
+  <p class="tests">artwork never made to repeat: wide band, whole joins</p>
+  <dl><dt>expected</dt><dd>fixed or review</dd>
+      <dt>outcome</dt><dd><b>review</b> no repair passed every check; the original is kept</dd>
+      <dt>size</dt><dd>480x560 → 480x560</dd>
+      <dt>windows</dt><dd>0 accepted of 4</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/unrelated_edges/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/unrelated_edges/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/unrelated_edges/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (review)</figcaption></figure></div>
+  <p class="files"><a href="unrelated_edges/run/report.json">report.json</a> · <a href="unrelated_edges/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>palette_mode</h2><span class="verdict">PASS</span></header>
+  <p class="tests">an indexed-colour tile stays indexed, on its own palette</p>
+  <dl><dt>expected</dt><dd>fixed or review</dd>
+      <dt>outcome</dt><dd><b>review</b> no repair passed every check; the original is kept</dd>
+      <dt>size</dt><dd>256x256 → 256x256</dd>
+      <dt>windows</dt><dd>2 accepted of 6</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/palette_mode/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/palette_mode/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/palette_mode/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (review)</figcaption></figure></div>
+  <p class="files"><a href="palette_mode/run/report.json">report.json</a> · <a href="palette_mode/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>grayscale</h2><span class="verdict">PASS</span></header>
+  <p class="tests">a grayscale tile stays grayscale</p>
+  <dl><dt>expected</dt><dd>fixed or review</dd>
+      <dt>outcome</dt><dd><b>review</b> no repair passed every check; the original is kept</dd>
+      <dt>size</dt><dd>256x256 → 256x256</dd>
+      <dt>windows</dt><dd>2 accepted of 6</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/grayscale/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/grayscale/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/grayscale/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (review)</figcaption></figure></div>
+  <p class="files"><a href="grayscale/run/report.json">report.json</a> · <a href="grayscale/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>cmyk</h2><span class="verdict">PASS</span></header>
+  <p class="tests">a CMYK tile comes back CMYK, as TIFF</p>
+  <dl><dt>expected</dt><dd>fixed or review</dd>
+      <dt>outcome</dt><dd><b>review</b> no repair passed every check; the original is kept</dd>
+      <dt>size</dt><dd>256x256 → 256x256</dd>
+      <dt>windows</dt><dd>2 accepted of 6</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/cmyk/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/cmyk/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/cmyk/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (review)</figcaption></figure></div>
+  <p class="files"><a href="cmyk/run/report.json">report.json</a> · <a href="cmyk/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>rgba_opaque</h2><span class="verdict">PASS</span></header>
+  <p class="tests">RGBA with every pixel opaque is repaired like RGB</p>
+  <dl><dt>expected</dt><dd>fixed or review</dd>
+      <dt>outcome</dt><dd><b>review</b> no repair passed every check; the original is kept</dd>
+      <dt>size</dt><dd>256x256 → 256x256</dd>
+      <dt>windows</dt><dd>2 accepted of 6</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/rgba_opaque/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/rgba_opaque/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/rgba_opaque/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (review)</figcaption></figure></div>
+  <p class="files"><a href="rgba_opaque/run/report.json">report.json</a> · <a href="rgba_opaque/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>transparent</h2><span class="verdict">PASS</span></header>
+  <p class="tests">transparent pixels: refused, nothing is painted</p>
+  <dl><dt>expected</dt><dd>refused</dd>
+      <dt>outcome</dt><dd><b>refused</b> the tile has transparent pixels; print repair needs an opaque tile</dd>
+      <dt>size</dt><dd>256x256 → 256x256</dd>
+      <dt>windows</dt><dd>0 accepted of 0</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/transparent/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/transparent/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/transparent/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (refused)</figcaption></figure></div>
+  <p class="files"><a href="transparent/run/report.json">report.json</a> · <a href="transparent/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>exif_rotated</h2><span class="verdict">PASS</span></header>
+  <p class="tests">a JPEG shown rotated by its EXIF tag: checked upright, returned as is</p>
+  <dl><dt>expected</dt><dd>returned</dd>
+      <dt>outcome</dt><dd><b>returned</b> </dd>
+      <dt>size</dt><dd>512x512 → 512x512</dd>
+      <dt>windows</dt><dd>0 accepted of 0</dd>
+      <dt>checks</dt><dd><span class="chip ok">byte_identical</span></dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/exif_rotated/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/exif_rotated/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/exif_rotated/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (returned)</figcaption></figure></div>
+  <p class="files"><a href="exif_rotated/run/report.json">report.json</a> · <a href="exif_rotated/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>sample: flower.jpeg</h2><span class="verdict">PASS</span></header>
+  <p class="tests">repo sample, free mode (LaMa only, no analyst)</p>
+  <dl><dt>expected</dt><dd>any</dd>
+      <dt>outcome</dt><dd><b>returned</b> </dd>
+      <dt>size</dt><dd>554x554 → 554x554</dd>
+      <dt>windows</dt><dd>0 accepted of 0</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_flower/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_flower/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_flower/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (returned)</figcaption></figure></div>
+  <p class="files"><a href="sample_flower/run/report.json">report.json</a> · <a href="sample_flower/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>sample: abcd.jpg</h2><span class="verdict">PASS</span></header>
+  <p class="tests">repo sample, free mode (LaMa only, no analyst)</p>
+  <dl><dt>expected</dt><dd>any</dd>
+      <dt>outcome</dt><dd><b>cut</b> </dd>
+      <dt>size</dt><dd>500x1000 → 355x327</dd>
+      <dt>windows</dt><dd>0 accepted of 0</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_abcd/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_abcd/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_abcd/run/cut_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (cut)</figcaption></figure></div>
+  <p class="files"><a href="sample_abcd/run/report.json">report.json</a> · <a href="sample_abcd/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>sample: peacock.jpg</h2><span class="verdict">PASS</span></header>
+  <p class="tests">repo sample, free mode (LaMa only, no analyst)</p>
+  <dl><dt>expected</dt><dd>any</dd>
+      <dt>outcome</dt><dd><b>cut</b> </dd>
+      <dt>size</dt><dd>717x1280 → 447x447</dd>
+      <dt>windows</dt><dd>0 accepted of 0</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_peacock/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_peacock/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_peacock/run/cut_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (cut)</figcaption></figure></div>
+  <p class="files"><a href="sample_peacock/run/report.json">report.json</a> · <a href="sample_peacock/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>sample: sample.jpg</h2><span class="verdict">PASS</span></header>
+  <p class="tests">repo sample, free mode (LaMa only, no analyst)</p>
+  <dl><dt>expected</dt><dd>any</dd>
+      <dt>outcome</dt><dd><b>review</b> no repair passed every check; the original is kept</dd>
+      <dt>size</dt><dd>491x945 → 491x945</dd>
+      <dt>windows</dt><dd>0 accepted of 1</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_sample/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_sample/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_sample/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (review)</figcaption></figure></div>
+  <p class="files"><a href="sample_sample/run/report.json">report.json</a> · <a href="sample_sample/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>sample: test.jpg</h2><span class="verdict">PASS</span></header>
+  <p class="tests">repo sample, free mode (LaMa only, no analyst)</p>
+  <dl><dt>expected</dt><dd>any</dd>
+      <dt>outcome</dt><dd><b>review</b> no repair passed every check; the original is kept</dd>
+      <dt>size</dt><dd>843x1063 → 843x1063</dd>
+      <dt>windows</dt><dd>2 accepted of 9</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_test/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_test/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_test/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (review)</figcaption></figure></div>
+  <p class="files"><a href="sample_test/run/report.json">report.json</a> · <a href="sample_test/run/events.jsonl">events.jsonl</a></p>
+</article>
+<article class="pass">
+  <header><h2>sample: design.jpeg</h2><span class="verdict">PASS</span></header>
+  <p class="tests">repo sample, free mode (LaMa only, no analyst)</p>
+  <dl><dt>expected</dt><dd>any</dd>
+      <dt>outcome</dt><dd><b>review</b> no repair passed every check; the original is kept</dd>
+      <dt>size</dt><dd>960x1200 → 960x1200</dd>
+      <dt>windows</dt><dd>0 accepted of 4</dd>
+      <dt>checks</dt><dd>—</dd></dl>
+  <div class="pair"><figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_design/run/input_2x2.png" alt="input 2x2" loading="lazy"><figcaption>input, 2x2</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_design/run/input_marked.png" alt="failing joins" loading="lazy"><figcaption>failing stretches in red</figcaption></figure>
+  <figure><img src="/home/peyuuush/codes/v1/seamfix/test_cases/sample_design/run/input_2x2.png" alt="result 2x2" loading="lazy"><figcaption>result, 2x2 (review)</figcaption></figure></div>
+  <p class="files"><a href="sample_design/run/report.json">report.json</a> · <a href="sample_design/run/events.jsonl">events.jsonl</a></p>
+</article>

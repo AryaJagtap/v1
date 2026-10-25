@@ -1,0 +1,142 @@
+{
+ "status": "review",
+ "reason": "no repair passed every check; the original is kept",
+ "files": {
+  "design": "design_original.jpeg"
+ },
+ "input": {
+  "name": "design.jpeg",
+  "size": [
+   960,
+   1200
+  ]
+ },
+ "output_size": [
+  960,
+  1200
+ ],
+ "cut": null,
+ "check": {
+  "lr": {
+   "overall": 6.569,
+   "worst": 12.96,
+   "ok": false,
+   "sections": [
+    7.09,
+    7.39,
+    2.98,
+    7.39,
+    12.96,
+    7.13,
+    8.93,
+    7.22,
+    2.1,
+    5.4,
+    7.09,
+    7.39,
+    2.98,
+    7.39,
+    12.96,
+    7.13,
+    8.93,
+    7.22,
+    2.1,
+    5.4
+   ]
+  },
+  "tb": {
+   "overall": 5.317,
+   "worst": 16.03,
+   "ok": false,
+   "sections": [
+    16.03,
+    6.13,
+    4.62,
+    2.5,
+    7.56,
+    2.18,
+    2.16,
+    4.36,
+    9.53,
+    8.7,
+    16.03,
+    6.13,
+    4.62,
+    2.5,
+    7.56,
+    2.18,
+    2.16,
+    4.36,
+    9.53,
+    8.7
+   ]
+  },
+  "ok": false,
+  "threshold": 1.1
+ },
+ "windows": [
+  {
+   "round": 1,
+   "window": 0,
+   "box": {
+    "y0": -480,
+    "x0": -480,
+    "size": 960,
+    "axes": [
+     "lr",
+     "tb"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 1,
+   "window": 1,
+   "box": {
+    "y0": -120,
+    "x0": -480,
+    "size": 960,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 1,
+   "window": 2,
+   "box": {
+    "y0": 600,
+    "x0": -480,
+    "size": 960,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 1,
+   "window": 3,
+   "box": {
+    "y0": -480,
+    "x0": -120,
+    "size": 960,
+    "axes": [
+     "tb"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  }
+ ],
+ "spent_usd": 1.0244,
+ "budget_left_usd": 0.4756
+}

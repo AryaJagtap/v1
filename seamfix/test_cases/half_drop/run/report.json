@@ -1,0 +1,104 @@
+{
+ "status": "cut",
+ "reason": "exact repeat: every pixel continues across the lr, tb join; the seam check reads a busy join as a seam there",
+ "files": {
+  "design": "halfdrop_repeat.png"
+ },
+ "input": {
+  "name": "halfdrop.png",
+  "size": [
+   780,
+   390
+  ]
+ },
+ "output_size": [
+  600,
+  260
+ ],
+ "cut": {
+  "repeat": {
+   "width": 600,
+   "height": 260,
+   "drop": 0,
+   "rows": 1,
+   "match": 0.0,
+   "across": true,
+   "down": true
+  },
+  "offset": [
+   0,
+   0
+  ],
+  "describe": "repeat 600x260 (block) -> straight tile 600x260",
+  "size": [
+   600,
+   260
+  ],
+  "passes": false,
+  "proven": [
+   "lr",
+   "tb"
+  ]
+ },
+ "check": {
+  "lr": {
+   "overall": 9.879,
+   "worst": 24.214,
+   "ok": false,
+   "sections": [
+    9.35,
+    7.34,
+    24.21,
+    1.96,
+    8.83,
+    8.79,
+    8.96,
+    20.28,
+    1.96,
+    8.84,
+    9.35,
+    7.34,
+    24.21,
+    1.96,
+    8.83,
+    8.79,
+    8.96,
+    20.28,
+    1.96,
+    8.84
+   ]
+  },
+  "tb": {
+   "overall": 0.391,
+   "worst": 0.951,
+   "ok": true,
+   "sections": [
+    0.7,
+    0.48,
+    0.37,
+    0.63,
+    0.1,
+    0.0,
+    0.73,
+    0.0,
+    0.95,
+    0.0,
+    0.7,
+    0.48,
+    0.37,
+    0.63,
+    0.1,
+    0.0,
+    0.73,
+    0.0,
+    0.95,
+    0.0
+   ]
+  },
+  "ok": false,
+  "threshold": 1.1
+ },
+ "windows": [],
+ "spent_usd": 1.0244,
+ "budget_left_usd": 0.4756
+}

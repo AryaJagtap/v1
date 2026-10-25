@@ -1,0 +1,104 @@
+{
+ "status": "cut",
+ "reason": "exact repeat: every pixel continues across the lr, tb join; the seam check reads a busy join as a seam there",
+ "files": {
+  "design": "over_repeat.png"
+ },
+ "input": {
+  "name": "over.png",
+  "size": [
+   742,
+   665
+  ]
+ },
+ "output_size": [
+  512,
+  512
+ ],
+ "cut": {
+  "repeat": {
+   "width": 512,
+   "height": 512,
+   "drop": 0,
+   "rows": 1,
+   "match": 0.0,
+   "across": true,
+   "down": true
+  },
+  "offset": [
+   0,
+   0
+  ],
+  "describe": "repeat 512x512 (block) -> straight tile 512x512",
+  "size": [
+   512,
+   512
+  ],
+  "passes": false,
+  "proven": [
+   "lr",
+   "tb"
+  ]
+ },
+ "check": {
+  "lr": {
+   "overall": 0.733,
+   "worst": 2.014,
+   "ok": true,
+   "sections": [
+    1.96,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.92,
+    1.98,
+    2.01,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.93,
+    1.99
+   ]
+  },
+  "tb": {
+   "overall": 1.989,
+   "worst": 9.275,
+   "ok": false,
+   "sections": [
+    0.0,
+    0.0,
+    1.11,
+    1.91,
+    1.14,
+    0.0,
+    4.02,
+    3.98,
+    3.71,
+    9.03,
+    0.0,
+    0.0,
+    1.14,
+    1.84,
+    1.23,
+    0.0,
+    4.02,
+    4.04,
+    3.62,
+    9.27
+   ]
+  },
+  "ok": false,
+  "threshold": 1.1
+ },
+ "windows": [],
+ "spent_usd": 1.0244,
+ "budget_left_usd": 0.4756
+}

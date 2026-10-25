@@ -1,0 +1,111 @@
+{
+ "status": "review",
+ "reason": "no repair passed every check; the original is kept",
+ "files": {
+  "design": "tiny_original.png"
+ },
+ "input": {
+  "name": "tiny.png",
+  "size": [
+   48,
+   48
+  ]
+ },
+ "output_size": [
+  48,
+  48
+ ],
+ "cut": null,
+ "check": {
+  "lr": {
+   "overall": 11.75,
+   "worst": 47.0,
+   "ok": false,
+   "sections": [
+    11.75,
+    8.55,
+    47.0,
+    6.71,
+    47.0,
+    6.71,
+    11.75,
+    47.0,
+    6.71,
+    47.0,
+    6.71,
+    18.8,
+    11.75,
+    8.55,
+    47.0,
+    6.71,
+    47.0,
+    30.5,
+    6.71,
+    47.0
+   ]
+  },
+  "tb": {
+   "overall": 0.0,
+   "worst": 0.0,
+   "ok": true,
+   "sections": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "ok": false,
+  "threshold": 1.1
+ },
+ "windows": [
+  {
+   "round": 1,
+   "window": 0,
+   "box": {
+    "y0": -6,
+    "x0": -24,
+    "size": 48,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 1,
+   "window": 1,
+   "box": {
+    "y0": 30,
+    "x0": -24,
+    "size": 48,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  }
+ ],
+ "spent_usd": 1.0244,
+ "budget_left_usd": 0.4756
+}

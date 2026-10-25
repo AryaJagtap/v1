@@ -1,0 +1,221 @@
+{
+ "status": "review",
+ "reason": "no repair passed every check; the original is kept",
+ "files": {
+  "design": "test_original.jpg",
+  "partial": "test_partial_for_review.png"
+ },
+ "input": {
+  "name": "test.jpg",
+  "size": [
+   843,
+   1063
+  ]
+ },
+ "output_size": [
+  843,
+  1063
+ ],
+ "cut": null,
+ "check": {
+  "lr": {
+   "overall": 1.21,
+   "worst": 1.924,
+   "ok": false,
+   "sections": [
+    0.59,
+    0.64,
+    1.6,
+    1.66,
+    0.11,
+    1.9,
+    1.67,
+    1.33,
+    1.05,
+    0.71,
+    0.59,
+    0.65,
+    1.6,
+    1.67,
+    0.09,
+    1.92,
+    1.68,
+    1.28,
+    1.08,
+    0.72
+   ]
+  },
+  "tb": {
+   "overall": 1.197,
+   "worst": 3.854,
+   "ok": false,
+   "sections": [
+    0.7,
+    0.89,
+    0.71,
+    0.85,
+    3.85,
+    2.65,
+    0.9,
+    0.64,
+    0.64,
+    0.62,
+    0.7,
+    0.9,
+    0.71,
+    0.81,
+    3.85,
+    2.76,
+    0.9,
+    0.66,
+    0.63,
+    0.63
+   ]
+  },
+  "ok": false,
+  "threshold": 1.1
+ },
+ "windows": [
+  {
+   "round": 1,
+   "window": 0,
+   "box": {
+    "y0": -421,
+    "x0": -421,
+    "size": 843,
+    "axes": [
+     "lr",
+     "tb"
+    ]
+   },
+   "attempts": 1,
+   "accepted": true,
+   "painter": "lama",
+   "score": 2.6698
+  },
+  {
+   "round": 1,
+   "window": 1,
+   "box": {
+    "y0": -129,
+    "x0": -421,
+    "size": 843,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 1,
+   "window": 2,
+   "box": {
+    "y0": 216,
+    "x0": -421,
+    "size": 843,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 1,
+   "window": 3,
+   "box": {
+    "y0": -421,
+    "x0": -232,
+    "size": 843,
+    "axes": [
+     "tb"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 1,
+   "window": 4,
+   "box": {
+    "y0": -421,
+    "x0": 169,
+    "size": 843,
+    "axes": [
+     "tb"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 2,
+   "window": 0,
+   "box": {
+    "y0": -421,
+    "x0": -421,
+    "size": 843,
+    "axes": [
+     "lr",
+     "tb"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 2,
+   "window": 1,
+   "box": {
+    "y0": -76,
+    "x0": -421,
+    "size": 843,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 2,
+   "window": 2,
+   "box": {
+    "y0": 189,
+    "x0": -421,
+    "size": 843,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": true,
+   "painter": "lama",
+   "score": 0.0
+  },
+  {
+   "round": 2,
+   "window": 3,
+   "box": {
+    "y0": -421,
+    "x0": -21,
+    "size": 843,
+    "axes": [
+     "tb"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  }
+ ],
+ "spent_usd": 1.0244,
+ "budget_left_usd": 0.4756
+}

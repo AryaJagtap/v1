@@ -1,0 +1,174 @@
+{
+ "status": "review",
+ "reason": "no repair passed every check; the original is kept",
+ "files": {
+  "design": "rgba_original.png",
+  "partial": "rgba_partial_for_review.png"
+ },
+ "input": {
+  "name": "rgba.png",
+  "size": [
+   256,
+   256
+  ]
+ },
+ "output_size": [
+  256,
+  256
+ ],
+ "cut": null,
+ "check": {
+  "lr": {
+   "overall": 3.452,
+   "worst": 14.434,
+   "ok": false,
+   "sections": [
+    0.0,
+    0.0,
+    0.75,
+    9.91,
+    13.98,
+    5.18,
+    0.98,
+    0.0,
+    2.27,
+    2.34,
+    0.0,
+    0.0,
+    1.99,
+    9.43,
+    14.43,
+    4.84,
+    1.0,
+    0.0,
+    2.81,
+    2.5
+   ]
+  },
+  "tb": {
+   "overall": 0.47,
+   "worst": 2.068,
+   "ok": true,
+   "sections": [
+    0.0,
+    2.07,
+    0.0,
+    0.0,
+    0.0,
+    1.61,
+    0.0,
+    2.03,
+    0.0,
+    0.04,
+    0.0,
+    2.03,
+    0.0,
+    0.0,
+    0.0,
+    1.72,
+    0.0,
+    2.06,
+    0.0,
+    0.04
+   ]
+  },
+  "ok": false,
+  "threshold": 1.1
+ },
+ "windows": [
+  {
+   "round": 1,
+   "window": 0,
+   "box": {
+    "y0": -39,
+    "x0": -128,
+    "size": 256,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 1,
+   "window": 1,
+   "box": {
+    "y0": 6,
+    "x0": -128,
+    "size": 256,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": true,
+   "painter": "lama",
+   "score": 0.0
+  },
+  {
+   "round": 1,
+   "window": 2,
+   "box": {
+    "y0": 115,
+    "x0": -128,
+    "size": 256,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 2,
+   "window": 0,
+   "box": {
+    "y0": -39,
+    "x0": -128,
+    "size": 256,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 2,
+   "window": 1,
+   "box": {
+    "y0": 6,
+    "x0": -128,
+    "size": 256,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": true,
+   "painter": "lama",
+   "score": 0.0
+  },
+  {
+   "round": 2,
+   "window": 2,
+   "box": {
+    "y0": 115,
+    "x0": -128,
+    "size": 256,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  }
+ ],
+ "spent_usd": 1.0244,
+ "budget_left_usd": 0.4756
+}

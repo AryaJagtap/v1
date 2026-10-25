@@ -1,0 +1,25 @@
+{
+ "kind": "repeat_tile",
+ "difficulty": "medium",
+ "reason": "A misaligned vertical seam cuts through an ornate paisley palmette where outlines and striped fills do not line up precisely.",
+ "style": "Flat screen print with crisp vector edges and stippled texture fills.",
+ "motifs": [
+  "large sweeping paisley boteh",
+  "scalloped palmette with maroon and beige petals",
+  "curved acanthus leaf scrolls",
+  "botanical sprigs with small white florets",
+  "dotted and striped border ribbons"
+ ],
+ "linework": "Crisp medium-weight outlines in deep taupe-brown, with delicate internal stippling, fine cross-hatching, and striped fills.",
+ "palette": [
+  "cream",
+  "beige",
+  "sand",
+  "taupe",
+  "deep olive-brown",
+  "muted maroon",
+  "white"
+ ],
+ "ground": "Light sand ground covered with a micro stippled floral ditsy texture.",
+ "across_join": "At mid-height along the vertical seam (marked in red), the maroon and cream lobed paisley palmette crossing from the right edge fails to connect seamlessly with the scalloped leaf base and curving borders exiting the left edge, causing an abrupt horizontal offset in the outer brown contours and interior shaded bands."
+}

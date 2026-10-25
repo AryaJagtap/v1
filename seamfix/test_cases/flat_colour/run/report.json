@@ -1,0 +1,80 @@
+{
+ "status": "returned",
+ "reason": "",
+ "files": {
+  "design": "flat_seamless.png"
+ },
+ "input": {
+  "name": "flat.png",
+  "size": [
+   200,
+   160
+  ]
+ },
+ "output_size": [
+  200,
+  160
+ ],
+ "cut": null,
+ "check": {
+  "lr": {
+   "overall": 0.0,
+   "worst": 0.0,
+   "ok": true,
+   "sections": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "tb": {
+   "overall": 0.0,
+   "worst": 0.0,
+   "ok": true,
+   "sections": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "ok": true,
+  "threshold": 1.1
+ },
+ "windows": [],
+ "spent_usd": 1.0244,
+ "budget_left_usd": 0.4756
+}

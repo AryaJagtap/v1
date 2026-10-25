@@ -1,0 +1,204 @@
+{
+ "status": "review",
+ "reason": "no repair passed every check; the original is kept",
+ "files": {
+  "design": "odd_original.png",
+  "partial": "odd_partial_for_review.png"
+ },
+ "input": {
+  "name": "odd.png",
+  "size": [
+   333,
+   517
+  ]
+ },
+ "output_size": [
+  333,
+  517
+ ],
+ "cut": null,
+ "check": {
+  "lr": {
+   "overall": 2.998,
+   "worst": 13.022,
+   "ok": false,
+   "sections": [
+    0.0,
+    0.71,
+    0.66,
+    13.02,
+    5.05,
+    2.93,
+    2.02,
+    0.61,
+    1.13,
+    0.0,
+    0.0,
+    0.69,
+    2.59,
+    12.01,
+    4.72,
+    3.03,
+    2.06,
+    0.62,
+    1.13,
+    0.0
+   ]
+  },
+  "tb": {
+   "overall": 0.0,
+   "worst": 0.0,
+   "ok": true,
+   "sections": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "ok": false,
+  "threshold": 1.1
+ },
+ "windows": [
+  {
+   "round": 1,
+   "window": 0,
+   "box": {
+    "y0": 1,
+    "x0": -166,
+    "size": 333,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 1,
+   "window": 1,
+   "box": {
+    "y0": 53,
+    "x0": -166,
+    "size": 333,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 1,
+   "window": 2,
+   "box": {
+    "y0": 118,
+    "x0": -166,
+    "size": 333,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": true,
+   "painter": "lama",
+   "score": 1.5272
+  },
+  {
+   "round": 1,
+   "window": 3,
+   "box": {
+    "y0": 182,
+    "x0": -166,
+    "size": 333,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 2,
+   "window": 0,
+   "box": {
+    "y0": 1,
+    "x0": -166,
+    "size": 333,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 2,
+   "window": 1,
+   "box": {
+    "y0": 53,
+    "x0": -166,
+    "size": 333,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  },
+  {
+   "round": 2,
+   "window": 2,
+   "box": {
+    "y0": 118,
+    "x0": -166,
+    "size": 333,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": true,
+   "painter": "lama",
+   "score": 1.7026
+  },
+  {
+   "round": 2,
+   "window": 3,
+   "box": {
+    "y0": 182,
+    "x0": -166,
+    "size": 333,
+    "axes": [
+     "lr"
+    ]
+   },
+   "attempts": 1,
+   "accepted": false,
+   "best_painter": "lama"
+  }
+ ],
+ "spent_usd": 1.0244,
+ "budget_left_usd": 0.4756
+}

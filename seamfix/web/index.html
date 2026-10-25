@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seamfix — repeat tile repair</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/web/styles.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="brand">Seamfix<span>repeat tile repair</span></div>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="repair" role="tab">Repair</button>
+      <button class="tab" data-tab="results" role="tab">Results</button>
+    </nav>
+    <div class="spend" id="spend" title="API spend against the cap in SEAMFIX_BUDGET_USD">—</div>
+  </header>
+
+  <main id="repair" class="view active">
+    <aside class="panel">
+      <section>
+        <h3>Tile</h3>
+        <label class="drop" id="drop">
+          <input type="file" id="file" accept="image/*" hidden>
+          <img id="preview" alt="" hidden>
+          <span id="dropText">Drop an image or <u>choose a file</u></span>
+        </label>
+        <div class="filename" id="filename"></div>
+      </section>
+      <section>
+        <h3>Mode</h3>
+        <div class="seg" id="mode">
+          <button data-value="full" class="on">Full</button>
+          <button data-value="free">Free</button>
+        </div>
+        <p class="hint" id="modeHint">Nano Banana paints, Gemini judges. Uses API credit.</p>
+      </section>
+      <section>
+        <h3>Attempts per window</h3>
+        <div class="seg" id="attempts">
+          <button data-value="2">2</button>
+          <button data-value="3" class="on">3</button>
+          <button data-value="4">4</button>
+        </div>
+      </section>
+      <button class="primary" id="run" disabled>Repair tile</button>
+      <section class="grow">
+        <h3>Steps</h3>
+        <ol class="steps" id="steps">
+          <li data-step="measure">Measure joins</li>
+          <li data-step="repeat">Look for a repeat</li>
+          <li data-step="diagnose">Describe design</li>
+          <li data-step="plan">Plan bands</li>
+          <li data-step="paint">Paint and check</li>
+          <li data-step="assemble">Re-check tile</li>
+          <li data-step="finish">Result</li>
+        </ol>
+        <div class="log" id="log"></div>
+      </section>
+    </aside>
+
+    <section class="stage">
+      <div class="toolbar">
+        <div class="seg views" id="views">
+          <button data-view="input" class="on">Input 2×2</button>
+          <button data-view="diamond">Diamond</button>
+          <button data-view="marked">Seams</button>
+          <button data-view="plan">Plan</button>
+          <button data-view="attempts">Attempts</button>
+          <button data-view="compare">Compare</button>
+        </div>
+        <div class="right">
+          <span class="pill" id="status" hidden></span>
+          <a class="button" id="download" hidden download>Download tile</a>
+        </div>
+      </div>
+      <div class="canvas" id="canvas">
+        <div class="empty" id="empty">Choose a tile to start. The 2×2 preview, the failing stretches and every repair attempt appear here.</div>
+        <img id="shot" alt="" hidden>
+        <div class="compare" id="compare" hidden>
+          <img id="cmpBefore" alt="before">
+          <img id="cmpAfter" alt="after">
+          <input type="range" id="cmpRange" min="0" max="100" value="50" aria-label="before and after">
+          <span class="tag left">Before</span><span class="tag right">After</span>
+        </div>
+      </div>
+      <div class="strip" id="strip" hidden></div>
+      <footer class="metrics" id="metrics">
+        <div><label>Left–right join</label><b id="mLr">—</b></div>
+        <div><label>Top–bottom join</label><b id="mTb">—</b></div>
+        <div><label>Diagnosis</label><b id="mKind">—</b></div>
+        <div><label>Windows accepted</label><b id="mWin">—</b></div>
+        <div class="reason"><label>Outcome</label><b id="mReason">—</b></div>
+      </footer>
+    </section>
+  </main>
+
+  <main id="results" class="view">
+    <aside class="panel">
+      <div class="seg" id="filter">
+        <button data-value="all" class="on">All</button>
+        <button data-value="run">Runs</button>
+        <button data-value="case">Test cases</button>
+      </div>
+      <ul class="list" id="list"></ul>
+    </aside>
+    <section class="stage">
+      <div class="toolbar">
+        <div class="title" id="rTitle">Select a result</div>
+        <div class="right">
+          <span class="pill" id="rStatus" hidden></span>
+          <a class="button" id="rDownload" hidden download>Download tile</a>
+        </div>
+      </div>
+      <div class="canvas">
+        <div class="compare" id="rCompare" hidden>
+          <img id="rBefore" alt="before">
+          <img id="rAfter" alt="after">
+          <input type="range" id="rRange" min="0" max="100" value="50" aria-label="before and after">
+          <span class="tag left">Before 2×2</span><span class="tag right">After 2×2</span>
+        </div>
+        <div class="empty" id="rEmpty">Runs from this app and the edge cases from <code>python -m seamfix.cases</code> are listed on the left.</div>
+      </div>
+      <footer class="metrics">
+        <div><label>Size</label><b id="rSize">—</b></div>
+        <div><label>Joins after</label><b id="rJoins">—</b></div>
+        <div><label>Expected</label><b id="rExpect">—</b></div>
+        <div class="reason"><label>What it tests / outcome</label><b id="rReason">—</b></div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="/web/app.js"></script>
+</body>
+</html>
