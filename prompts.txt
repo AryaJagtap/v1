@@ -1,0 +1,618 @@
+i have tried below prompts but still not getting the accurate result which i am waiting for.
+you can change the prompt if you want so that i can get the accurate result which i want.
+the input images can be of any kind, watercolours, paisely, decorations, abstract, etc , so according the prompt should work on evey kind of image.
+or else an agent can be used which can tweak or refine the prompt as per the type of image we get in input. for that we can use any fraimwork if required. 
+
+prompt 1 
+
+PROMPT = (
+
+    "This image is a repeat tile for a print design (textile or wallpaper style). "
+    "The transparent cross-shaped area is where the tile edges were joined and the pattern "
+    "does not line up. Repaint ONLY that transparent area so the design flows continuously "
+    "across it in every direction: complete motifs that are cut off, align mismatched ones, "
+    "and fill gaps by reusing the motifs, shapes, line work, textures, colours, contrast and "
+    "scale already present in this image. Do not add new kinds of objects, new colours, text, "
+    "borders, frames, shadows or watermarks, and leave no visible line, blur or colour shift "
+    "along the join. Do not change anything outside the transparent area."
+)
+
+prompt 2 
+
+PROMPT = (
+    "Repeat tile of a paisley textile print. Fill the transparent band so the artwork continues "
+    "straight across it: extend the outlines, fills and dot rows that touch the band's edges "
+    "until they meet their counterparts on the other side, with the same line weight, colours "
+    "and flat crisp print style as the neighbouring artwork, and the same fine background "
+    "texture. Add no new motifs. Change nothing outside the band."
+)
+
+prompt 3 
+
+PROMPT = (
+    """
+TASK: PRECISION RESTORATION OF A SEAMLESS TEXTILE PATTERN
+
+You are a precision ornamental-art restoration system, not a creative
+image generator. Repair the supplied pattern tile to produce a clean,
+professional, genuinely seamless textile or wallpaper repeat.
+
+The original image is the only authoritative reference. Preserve its
+existing artwork, motif geometry, colors, linework, layering, spacing,
+and decorative details. The objective is to repair the damaged joining
+area, NOT to redesign, embellish, or regenerate the pattern.
+
+STRICTLY follow the instructions below.
+
+==================================================
+1. PRESERVE THE ORIGINAL DESIGN
+==================================================
+
+Modify only the designated transparent or damaged repair region.
+
+Treat all correct, existing artwork as immutable. Do not redraw, replace,
+move, resize, rotate, duplicate, simplify, or modify any intact motif.
+
+Preserve the original composition, motif count, relative positions,
+scale, proportions, background, and decorative density.
+
+Do not regenerate the complete image. Do not change the original canvas
+dimensions, aspect ratio, or crop.
+
+Every reconstructed detail must be consistent with evidence visible in
+the original reference. Never substitute artistic imagination for
+reference-based reconstruction.
+
+==================================================
+2. CRITICAL: ELIMINATE HALF-PRINTED AND OVERLAPPING MOTIFS
+==================================================
+
+This is the highest-priority repair requirement.
+
+The original artwork contains intricate, closely interwoven ornamental
+shapes. Reconstruct their existing geometry accurately instead of
+drawing additional decorative shapes over them.
+
+NEVER place a new flower, petal, leaf, paisley, curl, flourish, scallop,
+or ornamental fragment over an existing incomplete motif to hide it.
+
+NEVER conceal a broken contour by adding another decorative element.
+
+NEVER merge two neighboring motifs into one malformed shape.
+
+NEVER create a second interpretation of an existing motif on top of
+the original motif.
+
+NEVER allow the outline of one motif to continue accidentally through
+the fill, outline, or interior details of another motif.
+
+NEVER create duplicate outlines, ghost shapes, doubled edges, floating
+fragments, unfinished petals, disconnected leaves, or unexplained
+overlapping decorative patches.
+
+Each individual motif must have one coherent, traceable geometry.
+Its outer contour, internal linework, fill regions, and decorative
+details must belong to the same recognizable shape.
+
+Where a motif is partially missing, reconstruct only its missing
+portion. Continue the existing contour from its actual endpoint and
+follow its original direction, curvature, thickness, and proportions.
+
+Do not draw a complete new motif when only a small section of an
+existing motif requires repair.
+
+Where two motifs meet, preserve their original boundary. Keep their
+contours distinct and follow the original spacing and layering.
+
+If the reference does not establish how an ambiguous motif continues,
+do not invent a complicated completion. Preserve the existing
+structure and use a conservative continuation of the surrounding
+background or ornamental linework.
+
+A clean, simple, reference-consistent repair is preferable to an
+elaborate but incorrect reconstruction.
+
+==================================================
+3. PRESERVE ORIGINAL LAYERING AND NEGATIVE SPACE
+==================================================
+
+Determine which shapes are in the foreground and which belong to the
+background by examining the surrounding undamaged artwork.
+
+Preserve the original foreground-background relationship exactly.
+
+If a foreground petal, paisley, leaf, or decorative border covers part
+of another shape, maintain that same relationship. Do not reverse
+their layering, expose hidden portions incorrectly, or draw background
+lines across foreground shapes.
+
+Continue background contours only through regions where they should
+actually be visible.
+
+Preserve the original gaps, narrow channels, enclosed spaces, and
+negative space between neighboring ornamental shapes.
+
+Do not fill every empty space with additional decoration. Do not
+connect separate motifs merely because they are close together.
+
+Do not create artificial intersections where existing contours pass
+near one another.
+
+Every intersection, overlap, and concealed boundary must look
+intentional and consistent with the original illustration.
+
+==================================================
+4. REPAIR CONTOURS BEFORE DETAILS
+==================================================
+
+Reconstruct the damaged area in this logical order:
+
+1. Establish the boundaries of existing motifs.
+2. Continue interrupted outer contours.
+3. Restore the original separation and layering of neighboring shapes.
+4. Reconstruct the correct interior fills.
+5. Continue internal decorative lines, dots, veins, scallops, and
+   fine ornamental details.
+6. Restore the background texture and local color transitions.
+7. Verify continuity at the tile boundaries.
+
+Do not add internal details until their parent shape has been
+reconstructed correctly.
+
+Every line must connect to the correct existing line or end naturally
+where the reference indicates that it should end.
+
+Maintain consistent outline thickness, curvature, edge smoothness,
+and color. Do not create a second contour alongside an existing one.
+
+Preserve the original distinction between filled shapes, outlined
+shapes, background decorations, and overlapping ornamental layers.
+
+Avoid abrupt line endings, malformed junctions, disconnected strokes,
+crossing outlines, doubled borders, and irregular contour thickness.
+
+==================================================
+5. NO INVENTED OR UNNECESSARY MOTIFS
+==================================================
+
+Use only the flowers, leaves, paisleys, petals, curls, ornamental
+ribbons, scallops, dots, flourishes, and background marks already
+present in the supplied reference.
+
+Do not invent new flowers, additional petals, new leaf arrangements,
+extra decorative clusters, new medallions, or replacement ornaments.
+
+Do not duplicate nearby motifs to disguise a damaged area.
+
+Do not increase the number of motifs or make the composition denser.
+
+A repeated motif may be reconstructed only when its presence and
+appearance are supported by the original pattern.
+
+Use other occurrences of the same motif as references for missing
+details, but do not copy an entire motif into a location where it
+does not belong.
+
+Preserve original asymmetry, irregularities, spacing, and stylistic
+differences. Do not force artificial symmetry.
+
+==================================================
+6. EXACT ORIGINAL COLOR MATCHING
+==================================================
+
+The original image is the exclusive color reference.
+
+Sample or match colors from the nearest corresponding undamaged
+regions wherever possible.
+
+Preserve the exact visual relationships between the existing ivory,
+cream, beige, taupe, brown, olive, muted red, maroon, white, and
+other colors actually present in the reference.
+
+Do not introduce new hues, saturation changes, color grading,
+unrequested gradients, artificial shadows, or brighter highlights.
+
+Match each fill and outline independently. Do not paint an entire
+reconstructed motif with a single approximate color.
+
+Continue the original background color and fine texture without
+halos, color bleeding, patches, or abrupt tonal transitions.
+
+Do not globally enhance, recolor, sharpen, blur, or otherwise
+process the undamaged artwork.
+
+==================================================
+7. PRESERVE BACKGROUND TEXTURE
+==================================================
+
+Continue the existing background texture with matching detail size,
+density, spacing, direction, contrast, and color.
+
+Preserve fine floral marks, stippling, tiny dots, and subtle decorative
+textures where they are visible in the surrounding reference.
+
+Do not replace detailed areas with flat fills, blurred patches,
+generic noise, newly invented patterns, or oversized decorative marks.
+
+Prevent background texture from bleeding across foreground contours.
+
+Maintain clean boundaries between the background and every
+ornamental shape.
+
+==================================================
+8. REPAIR MASK AND EDGE CONTROL
+==================================================
+
+The transparent or designated repair region is the only editable area.
+
+Use the surrounding original artwork as context, with sufficient
+nearby detail to reconstruct interrupted contours accurately.
+
+Do not unnecessarily expand the repair region into correct artwork.
+
+Where the mask touches an existing shape, continue its actual
+boundary instead of creating a replacement shape.
+
+Where the mask intersects a line, preserve the line's original
+trajectory and reconnect it smoothly.
+
+Where the mask intersects several neighboring motifs, reconstruct
+each motif independently while respecting their original layering.
+
+Do not interpret the mask boundary as an artistic outline, border,
+or new motif boundary.
+
+The finished artwork must contain no unintended transparent holes,
+unfinished fills, visible mask edges, or repair patches.
+
+==================================================
+9. TRUE SEAMLESS REPEAT
+==================================================
+
+Ensure that the finished tile repeats continuously in both horizontal
+and vertical directions, including diagonal repetition.
+
+Match the left edge to the right edge and the top edge to the bottom
+edge. Check all four corners and their transitions.
+
+Preserve the position, shape, scale, color, thickness, and direction
+of every feature crossing a tile boundary.
+
+Do not create new motifs merely to make opposite edges appear similar.
+
+Maintain the original composition while correcting boundary
+discontinuities.
+
+The result must not show visible seams, broken contours, duplicated
+edge fragments, mismatched textures, sudden color changes, or
+obvious repeating artifacts.
+
+==================================================
+10. PRINT-READY OUTPUT
+==================================================
+
+Produce clean, detailed, high-fidelity flat artwork suitable for
+professional textile and wallpaper printing.
+
+Preserve the source resolution, canvas dimensions, original palette,
+fine linework, and intricate ornamental details.
+
+Avoid blur, pixelation, jagged contours, compression artifacts,
+smudges, sharpening halos, and loss of detail.
+
+Do not invent additional texture or detail to simulate higher quality.
+
+Do not add text, borders, frames, watermarks, mockups, or backgrounds
+that are not present in the original artwork.
+
+Return only the repaired pattern tile.
+
+==================================================
+11. FINAL QUALITY-CONTROL RULE
+==================================================
+
+Before finalizing, inspect every reconstructed motif against the
+original image.
+
+Reject any reconstruction that introduces:
+- A new or duplicated decorative motif.
+- A half-printed shape hidden beneath another shape.
+- Two accidentally fused or intersecting motifs.
+- A doubled, broken, or misaligned outline.
+- An incorrect foreground-background relationship.
+- An inconsistent color, fill, texture, or contour.
+- A visible patch or discontinuity at a tile boundary.
+
+If any proposed reconstruction conflicts with the existing artwork,
+preserve the original artwork and choose the least invasive repair.
+
+PRIORITY:
+Reference fidelity > correct motif geometry > correct layering >
+original colors and texture > seamless continuity > added detail.
+
+FINAL COMMAND:
+Restore the existing artwork; do not create new artwork.
+Repair the missing geometry of existing motifs instead of covering
+errors with additional designs. Every reconstructed element must
+belong to the original composition, with clean contours, correct
+layering, no accidental overlaps, and no invented decorative motifs.
+"""
+)
+
+prompt 4
+
+PROMPT = (
+    "ROLE AND OBJECTIVE:\n"
+    "You are an expert textile-pattern restoration artist, ornamental illustration "
+    "specialist, and professional seamless-repeat designer preparing artwork for "
+    "high-quality commercial textile and wallpaper printing.\n\n"
+
+    "Your task is to repair the damaged, transparent, or mismatched joining area "
+    "of the supplied pattern tile and produce a genuinely seamless, visually "
+    "continuous repeat while preserving the original artwork as faithfully as "
+    "possible.\n\n"
+
+    "The supplied image is the MASTER REFERENCE and the sole source of truth "
+    "for the artwork's motifs, geometry, decorative details, linework, colors, "
+    "textures, shading, proportions, and artistic style. Restoration must be "
+    "based on evidence visible in this image, not on creative interpretation.\n\n"
+
+    "==================================================\n"
+    "1. STRICT PRESERVATION OF ORIGINAL ARTWORK\n"
+    "==================================================\n"
+    "Preserve the original design exactly wherever it is already correct.\n"
+    "Modify ONLY the transparent, damaged, mismatched, or explicitly designated "
+    "repair region. Treat every undamaged pixel outside this region as locked "
+    "and immutable.\n\n"
+
+    "Do not redesign, redraw, beautify, simplify, modernize, stylize, or "
+    "reinterpret the original artwork. Do not regenerate the entire image.\n"
+    "Do not alter the composition, motif placement, motif count, spacing, "
+    "scale, orientation, proportions, or density of the original design.\n\n"
+
+    "The final image must look as though the original artist created the "
+    "repaired area as part of the same uninterrupted illustration.\n\n"
+
+    "==================================================\n"
+    "2. ABSOLUTELY NO INVENTED MOTIFS OR NEW DESIGNS\n"
+    "==================================================\n"
+    "Reproduce ONLY motifs, flowers, leaves, paisleys, petals, curls, ornamental "
+    "medallions, scallops, dots, flourishes, borders, and decorative elements "
+    "that are demonstrably present in the supplied reference.\n\n"
+
+    "NEVER invent a new flower, an additional petal arrangement, a new leaf, "
+    "a new paisley, a new ornamental centerpiece, a new decorative cluster, "
+    "or any other motif that does not already belong to the original artwork.\n\n"
+
+    "Do not add motifs merely to fill empty spaces, improve visual balance, "
+    "make the composition more attractive, or make the pattern appear richer.\n"
+    "Do not duplicate a nearby motif unless the original pattern clearly "
+    "demonstrates that the same motif continues or repeats in that location.\n\n"
+
+    "When reconstructing a partially visible motif, use its visible portions, "
+    "matching contours, neighboring details, and other occurrences of the "
+    "same motif elsewhere in the reference to infer the missing structure.\n\n"
+
+    "If the missing portion cannot be determined confidently, prefer a "
+    "conservative continuation of the existing background, ornamental lines, "
+    "or surrounding shapes rather than inventing an elaborate new object.\n"
+    "Never sacrifice fidelity to fill every space with decoration.\n\n"
+
+    "==================================================\n"
+    "3. MOTIF RECONSTRUCTION AND SHAPE CONTINUITY\n"
+    "==================================================\n"
+    "Carefully examine every motif intersecting the repair region before "
+    "reconstructing it. Identify its visible boundary, center, direction, "
+    "symmetry, internal details, outline thickness, and relationship to "
+    "neighboring motifs.\n\n"
+
+    "Continue cut-off shapes along their existing trajectories. Match the "
+    "curvature, scale, orientation, contour, internal ornamentation, and "
+    "natural endpoint of each existing shape.\n\n"
+
+    "Maintain the original geometry of paisley curves, floral petals, leaf "
+    "veins, scalloped edges, ornamental ribbons, parallel outlines, fine "
+    "filigree, and decorative borders.\n\n"
+
+    "Where a motif is symmetrical, preserve its established symmetry. Where "
+    "the artwork is intentionally asymmetrical, preserve that asymmetry "
+    "instead of forcing artificial symmetry.\n\n"
+
+    "Continue every existing line into its correct counterpart. Lines must "
+    "meet smoothly with matching direction, curvature, thickness, color, "
+    "and outline hierarchy. Avoid abrupt endings, disconnected strokes, "
+    "misaligned curves, broken contours, doubled outlines, and sudden "
+    "changes in ornament size.\n\n"
+
+    "Do not stretch, squeeze, rotate, distort, or arbitrarily resize motifs "
+    "to force them to fit the repair area. Maintain their original proportions.\n\n"
+
+    "==================================================\n"
+    "4. PREVENT OVERLAPPING, COLLISIONS, AND PATCHING\n"
+    "==================================================\n"
+    "Every ornamental element must have a clear, intentional, visually "
+    "consistent relationship with the elements around it.\n\n"
+
+    "Do not place a newly reconstructed motif over an existing motif to hide "
+    "an incomplete shape, damaged contour, exposed background, or unfinished "
+    "edge. Never use one flower, leaf, paisley, flourish, or decorative patch "
+    "to conceal another partially reconstructed element.\n\n"
+
+    "Do not merge two separate motifs into one, fuse their outlines, intersect "
+    "their contours accidentally, or create tangled linework. Preserve the "
+    "original separation and spacing between neighboring elements.\n\n"
+
+    "Respect the original layering and occlusion order. If one shape originally "
+    "sits behind another, maintain that same foreground-background relationship. "
+    "Do not bring a background shape into the foreground or allow it to cross "
+    "a foreground outline incorrectly.\n\n"
+
+    "Where a foreground motif naturally covers part of a background motif, "
+    "reconstruct the visible boundaries cleanly and consistently. The overlap "
+    "must look intentional and follow the reference's existing construction.\n\n"
+
+    "Do not create ghost outlines, doubled edges, abrupt cutoffs, stray "
+    "decorative fragments, floating petals, malformed junctions, unexpected "
+    "intersections, or visible traces of the original damaged seam.\n\n"
+
+    "Never solve a reconstruction problem by simply painting a new decorative "
+    "shape over the problem. Repair the underlying geometry and linework "
+    "instead.\n\n"
+
+    "==================================================\n"
+    "5. EXACT COLOR AND PALETTE FIDELITY\n"
+    "==================================================\n"
+    "Preserve the original image's color palette with the highest possible "
+    "fidelity. Derive every repaired color from corresponding or visually "
+    "equivalent colors already present in the reference.\n\n"
+
+    "Match the original background color, cream and ivory tones, beige and "
+    "taupe shades, browns, muted reds, maroons, olive tones, outlines, highlights, "
+    "shadows, and every other color actually present in the supplied image.\n\n"
+
+    "Do not introduce new hues, additional accent colors, more saturated "
+    "reds, brighter whites, darker browns, cooler greys, or altered color "
+    "combinations. Do not shift the overall palette warmer or cooler.\n\n"
+
+    "Match local color relationships, including foreground and background "
+    "contrast, outline color, fill color, highlight tone, and shadow tone.\n"
+    "Use the correct color for each individual region rather than applying "
+    "a generic color to an entire reconstructed motif.\n\n"
+
+    "Continue background textures and solid color regions without visible "
+    "color boundaries. Avoid color bleeding, halos, color contamination, "
+    "uneven tinting, artificial gradients, and abrupt tonal transitions.\n\n"
+
+    "Do not globally recolor, enhance saturation, change brightness, adjust "
+    "contrast, apply filters, or perform automatic color grading. Preserve "
+    "the original color appearance and tonal relationships.\n\n"
+
+    "==================================================\n"
+    "6. BACKGROUND TEXTURE AND FINE DETAILS\n"
+    "==================================================\n"
+    "Reconstruct the original background using the same texture, grain, "
+    "tiny floral marks, stippling, dots, fine ornamentation, and surface "
+    "detail visible in the surrounding undamaged pixels.\n\n"
+
+    "Match the background's local texture density, direction, scale, "
+    "distribution, contrast, and irregularity. Do not replace detailed "
+    "background artwork with a flat fill, generic texture, blurred patch, "
+    "or newly invented decorative pattern.\n\n"
+
+    "Continue fine linework, tiny dots, repeated micro-motifs, thin borders, "
+    "and small decorative marks naturally through the repaired region.\n"
+    "Avoid oversized details, randomly scattered marks, artificial regularity, "
+    "unwanted texture clumps, or inconsistent spacing.\n\n"
+
+    "Maintain the same illustration technique as the reference. If the source "
+    "uses crisp ornamental outlines and clean filled shapes, retain that "
+    "appearance. Do not introduce photographic texture, painterly brushstrokes, "
+    "3D effects, or a different illustration style.\n\n"
+
+    "==================================================\n"
+    "7. TRANSPARENT REPAIR REGION AND MASK CONTROL\n"
+    "==================================================\n"
+    "The transparent cross-shaped area identifies the region requiring repair "
+    "at the tile joins. Use the surrounding visible artwork as contextual "
+    "reference for reconstructing the missing content.\n\n"
+
+    "Restore the damaged area from the original artwork outward. Reconnect "
+    "existing motifs, outlines, curves, background fills, and textures across "
+    "the damaged region without leaving any transparent holes or unfinished "
+    "areas within the intended artwork.\n\n"
+
+    "Do not expand the repair unnecessarily into intact artwork. Do not alter "
+    "correct existing motifs merely because they touch the mask boundary.\n"
+    "Blend the repaired region into its immediate surroundings with exact "
+    "geometric and tonal continuity.\n\n"
+
+    "If the repair mask touches an existing outline, continue that outline "
+    "from its actual endpoint. Do not redraw the entire neighboring object "
+    "or create a parallel outline alongside it.\n\n"
+
+    "Keep the original canvas dimensions, aspect ratio, orientation, and "
+    "tile boundaries unchanged. Do not crop, rotate, resize, reframe, or "
+    "add margins to the image.\n\n"
+
+    "==================================================\n"
+    "8. TRUE SEAMLESS TILE-TO-TILE CONTINUITY\n"
+    "==================================================\n"
+    "The finished image must repeat continuously when tiled horizontally, "
+    "vertically, and diagonally in a rectangular grid.\n\n"
+
+    "Ensure that every feature crossing one tile boundary continues at the "
+    "corresponding opposite boundary with matching position, scale, direction, "
+    "shape, line thickness, color, and texture.\n\n"
+
+    "Check the left and right edges as a matching pair, and the top and bottom "
+    "edges as a matching pair. Also verify the four corners and the transitions "
+    "where multiple boundaries meet.\n\n"
+
+    "Eliminate visible seams, discontinuous curves, mismatched outlines, "
+    "repeated-edge slivers, doubled contours, abrupt background changes, "
+    "misaligned micro-patterns, and noticeable discontinuities in motif spacing.\n\n"
+
+    "Do not create a visible central repair patch, cross-shaped junction, "
+    "straight dividing line, abrupt texture transition, or a different-looking "
+    "region where the repaired sections meet.\n\n"
+
+    "The tile must look natural as a standalone image and when repeated "
+    "many times side by side, above and below, and diagonally. Do not introduce "
+    "obvious repeating artifacts or a newly emphasized central motif.\n\n"
+
+    "==================================================\n"
+    "9. PRINT-QUALITY ARTWORK REQUIREMENTS\n"
+    "==================================================\n"
+    "Produce clean, detailed, high-fidelity artwork suitable for professional "
+    "textile, fabric, and wallpaper pattern production.\n\n"
+
+    "Preserve sharp edges, smooth curves, consistent outlines, intricate "
+    "ornamental details, fine decorative marks, and the original level of "
+    "detail. Avoid blur, pixelation, jagged edges, compression artifacts, "
+    "noise, smudging, ringing, and loss of fine linework.\n\n"
+
+    "Do not add artificial sharpening halos, excessive micro-details, "
+    "unrequested outlines, or texture that does not exist in the source.\n\n"
+
+    "Retain the original image dimensions and use the highest native output "
+    "resolution supported by the image-processing pipeline. Do not sacrifice "
+    "detail or fidelity to increase apparent sharpness.\n\n"
+
+    "Do not simulate print grain, fabric texture, paper texture, or a printed "
+    "product mockup unless those elements already exist in the reference.\n"
+    "Return the repaired flat pattern artwork only, not a preview, collage, "
+    "presentation, or photograph of printed fabric.\n\n"
+
+    "==================================================\n"
+    "10. FINAL VALIDATION BEFORE OUTPUT\n"
+    "==================================================\n"
+    "Before finalizing, inspect the repaired region against the entire "
+    "reference image and verify all of the following:\n\n"
+
+    "- No invented flowers, leaves, paisleys, ornaments, or decorative motifs.\n"
+    "- No unnecessary duplication or changes to the original motif arrangement.\n"
+    "- No incomplete shapes concealed beneath newly drawn patterns.\n"
+    "- No accidental motif collisions, fused outlines, or incorrect overlaps.\n"
+    "- All reconstructed contours, borders, and fine lines connect naturally.\n"
+    "- The original palette, local colors, tonal relationships, and texture "
+    "density remain consistent.\n"
+    "- No transparent holes, blurred patches, abrupt transitions, or visible "
+    "repair boundaries remain in the intended artwork.\n"
+    "- The tile repeats cleanly across all four edges and all four corners.\n"
+    "- All undamaged artwork outside the designated repair area remains unchanged.\n\n"
+
+    "PRIORITY ORDER:\n"
+    "1. Preserve existing artwork and avoid changing undamaged pixels.\n"
+    "2. Reconstruct only designs supported by evidence in the reference.\n"
+    "3. Preserve original motif geometry, layering, spacing, and linework.\n"
+    "4. Match original colors and background textures.\n"
+    "5. Achieve seamless continuity across the tile boundaries.\n"
+    "6. Maintain the highest possible detail and print-production quality.\n\n"
+
+    "FINAL INSTRUCTION:\n"
+    "Perform precise restoration, not creative redesign. The result must be "
+    "the original pattern with only its damaged joining areas repaired. "
+    "Every reconstructed element must belong naturally to the original design. "
+    "When uncertain, preserve simplicity and existing evidence rather than "
+    "inventing a new motif. Return only the finished seamless pattern tile."
+)
